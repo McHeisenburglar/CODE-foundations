@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Forms Basics</title>
+	<link rel="stylesheet" type="text/css" href="/style-animate.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,500,600,700,800&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #1C2838; color: white;">
+	<div id="container">
+		<img class="icon" src="https://cdn.glitch.com/6fe427ae-d3ba-45f3-8041-3a10617d2a8d%2Fguy-fawkes.svg?v=1581947192302">
+		<h1>Join #theSTUDENT</h1>
+		<h2>Challenge the stastus quo.</h2>
+		<form style="position: relative; z-index: 0;" action="cgi-bin/greeting.py">
+			<div>
+				<h3 style="animation-duration: 3s;">E-mail address</h3>
+				<div id="email-div">
+					<input autocomplete="off" name="name" type="text" placeholder="thomas.bachem">
+					<span id="code-email">@code.berlin</span>
+					<div id="email-bg"></div>
+				</div>
+
+				<h3>Which class are you in?</h3>
+				<div id="radio-grid">
+					<div class="radio-item" id="radio-item-1">
+						<input type="radio" name="generation" id="firstclass" value="firstclass">
+						<label class="transitioned-1" for="firstclass">#firstclass</label>
+					</div>
+					<div class="radio-item" id="radio-item-2">
+						<input type="radio" name="generation" id="nextgen" value="nextgen">
+						<label class="transitioned-1" for="nextgen">#nextgen</label>
+					</div>
+					<div class="radio-item" id="radio-item-2">
+						<input type="radio" name="generation" id="thirdparty" value="thirdparty">
+						<label for="thirdparty">#thirdparty</label>
+					</div>
+				</div>
+			</div>
+			<button type="submit">Sign up</button>
+		</form>
+	</div>
+	<script> </script>
+</body>
+</html>
