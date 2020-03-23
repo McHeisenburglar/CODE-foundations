@@ -1,6 +1,6 @@
 f_number = input("Which sample file: ")
 f_test = open(f'./src/sample{f_number}_tests.txt')
-f_sol = open(f"./src/sample{f_number}_solutions.txt")
+f_sol = open(f'./src/sample{f_number}_solutions.txt')
 
 test_list = f_test.read().splitlines()
 solution_list = f_sol.read().splitlines()
