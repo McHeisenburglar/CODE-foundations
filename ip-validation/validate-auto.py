@@ -5,12 +5,6 @@ f_sol = open(f"./src/sample{f_number}_solutions.txt")
 test_list = f_test.read().splitlines()
 solution_list = f_sol.read().splitlines()
 
-def check(output, index):
-    if output == solution_list[index]:
-        print(f"{index + 1} Correct.")
-    else:
-        print(f"{index + 1} Incorrect. Output: {output}. Expected: {solution_list[index]}")
-
 for x in range(len(test_list)):
     print(f"index: {x}")
     str = test_list[x]
