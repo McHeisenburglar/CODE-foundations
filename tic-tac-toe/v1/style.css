@@ -1,0 +1,79 @@
+html {
+	font-family: 'Avenir Next', sans-serif;
+}
+
+body {
+	background-color: #9BA8AF;
+}
+
+#content {
+	min-width: 100px;
+	width: 600px;
+	background-color: white;
+	margin: 100px auto;
+	padding: 32px;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 22px;
+}
+
+p {
+	font-size: 16px;
+	color: #485151;
+}
+
+h2.x #playerSpan {
+	color: red;
+}
+
+h2.o #playerSpan {
+	color: blue;
+}
+
+#board {
+	width: 400px;
+	height: 400px;
+	margin: 40px auto 20px auto;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 5px;
+}
+
+.tile {
+	background-color: #D9E4EB;
+	outline: none;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 40px;
+	/*transition-duration: 0.1s;*/
+}
+
+.tile.x {
+	background-color: red;
+}
+
+.tile.o {
+	background-color: blue;
+}
+
+.tile:hover {
+	outline-width: 2px;
+	outline-style: solid;
+	/*transition-duration: 0.1s;*/
+}
+
+h2.x + #board .tile.n:hover {
+	outline-color: red;
+}
+
+h2.o + #board .tile.n:hover {
+	outline-color: blue;
+}
+
+.tile:not(.n):hover {
+	outline-color: #BDBDBD;
+}

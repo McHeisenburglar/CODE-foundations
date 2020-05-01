@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+</head>
+<body onload="">
+	<div id="content">
+		<h1>Tic Tac Toe</h1>
+		<p>You should already know how to play. Enjoy!</p>
+		<h2 class="x" id="turn">It's <span id="playerSpan">Player X's</span> turn!</h2>
+		<div id="board">
+				<div onClick="placeTurn('00')" class="tile n" id="00"></div>
+				<div onClick="placeTurn('01')" class="tile n" id="01"></div>
+				<div onClick="placeTurn('02')" class="tile n" id="02"></div>
+				<div onClick="placeTurn('10')" class="tile n" id="10"></div>
+				<div onClick="placeTurn('11')" class="tile n" id="11"></div>
+				<div onClick="placeTurn('12')" class="tile n" id="12"></div>
+				<div onClick="placeTurn('20')" class="tile n" id="20"></div>
+				<div onClick="placeTurn('21')" class="tile n" id="21"></div>
+				<div onClick="placeTurn('22')" class="tile n" id="22"></div>
+			</div>
+			<button onClick="changeTurn()">CHANGE TURN</button>
+			<button onClick="checkTurn()">CHECK TURN</button>
+			<button onClick="resetBoard()">RESET</button>
+		</div>
+	</div>
+</body>
+</html>
