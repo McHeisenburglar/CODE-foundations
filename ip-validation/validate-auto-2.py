@@ -9,7 +9,11 @@ f_sol = open(f'./src/sample{f_number}_solutions.txt')
 test_list = f_test.read().splitlines() # all the test inputs
 solution_list = f_sol.read().splitlines() # all the correct (expected) outputs
 
-# Check if my output matches the correct output.
+# Close files
+f_test.close()
+f_sol.close()dfs
+
+# Check if an output matches the correct answer.
 def check(output, index):
     if output == solution_list[index]:
         print(f"{index + 1:02d} \u001b[32mCorrect.\u001b[37m")
@@ -22,23 +26,14 @@ for x in range(len(test_list)):
     # Get string from line
     str = test_list[x]
     try:
-        str_ipv4 = str.split(".") # Create IPv4 test string
-        str_ipv6 = str.split(":") # Create IPv6 test string
-
         # If it contains the correct amount of packets for IPv4, and
-        # each packet is between the correct range, check for correct
-        if len(str_ipv4) == 4:
-            if all(0 <= int(n) <= 255 for n in str_ipv4):
-                check("IPv4", x)
-            else: 
-                check("Neither", x)
+        # each packet is in the correct range, check for correct.
+        if len(str.split(".")) == 4 and all(0 <= int(n) <= 255 for n in str.split(".")):
+            check("IPv4", x)
 
         # Same for IPv6
-        elif len(str_ipv6) == 8:
-            if all(0 <= int(n, 16) <= 65535 for n in str_ipv6):
-                check("IPv6", x)
-            else:
-                check("Neither", x)
+        elif len(str.split(":")) == 8 and all(0 <= int(n, 16) <= 65535 for n in str.split(":")):
+            check("IPv6", x)
 
         # If neither match, check Neither
         else:
